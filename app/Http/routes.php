@@ -1,5 +1,5 @@
 <?php
-
+// use Psr\Http\Message\ServerRequestInterface;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,5 +12,40 @@
 */
 
 $app->get('/', function () use ($app) {
-    return $app->version();
+    // return $app->version();
+    return 'hello world';
 });
+
+$app->get('foo/bar', function () use ($app) {
+	$url = url('foo/bar');
+	return $url;
+});
+
+$app->get('user/{userid}/test/{test}', function ($i, $t) {
+	return 'User ' . $i . $t;
+});
+
+$app->get('test', ['uses' => 'ExampleController@test', 'as' => 'name']);
+
+$app->get('te', function () use ($app) {
+	// $url = action('ExampleController@test');
+	$url = route('name');
+	echo $url;
+});
+
+$app->get('id/{name}', 'ExampleController@update');
+
+$app->get('json', 'ExampleController@json');
+
+// $app->get('psr', function (ServerRequestInterface $request) {
+// 	var_dump($request);
+// });
+
+
+
+
+
+
+
+
+
