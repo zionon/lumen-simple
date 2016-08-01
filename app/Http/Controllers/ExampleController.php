@@ -38,6 +38,23 @@ class ExampleController extends Controller
     }
 
     /**
+     * 
+     */
+    public function view()
+    {
+        var_dump(response());
+        // return view('greeting', ['name' => 'Huang']);
+    }
+
+    /**
+     * 
+     */
+    public function login()
+    {
+        return view('admin.login');
+    }
+
+    /**
      *
      * 
      */

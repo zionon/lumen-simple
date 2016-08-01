@@ -36,6 +36,8 @@ $app->get('te', function () use ($app) {
 $app->get('id/{name}', 'ExampleController@update');
 
 $app->get('json', 'ExampleController@json');
+$app->get('view', 'ExampleController@view');
+$app->get('login', 'ExampleController@login');
 
 // $app->get('psr', function (ServerRequestInterface $request) {
 // 	var_dump($request);
