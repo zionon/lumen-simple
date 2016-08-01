@@ -62,4 +62,12 @@ class ExampleController extends Controller
     {
         return response()->json(['name' => 'Huangguanhao', 'age' => '18']);
     }
+
+    /**
+     * 
+     */
+    public function phpinfo()
+    {
+        phpinfo();
+    }
 }

@@ -38,6 +38,7 @@ $app->get('id/{name}', 'ExampleController@update');
 $app->get('json', 'ExampleController@json');
 $app->get('view', 'ExampleController@view');
 $app->get('login', 'ExampleController@login');
+$app->get('phpinfo', 'ExampleController@phpinfo');
 
 // $app->get('psr', function (ServerRequestInterface $request) {
 // 	var_dump($request);
