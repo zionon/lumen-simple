@@ -40,6 +40,8 @@ $app->get('view', 'ExampleController@view');
 $app->get('login', 'ExampleController@login');
 $app->get('phpinfo', 'ExampleController@phpinfo');
 
+$app->get('signup', 'PageController@signup');
+
 // $app->get('psr', function (ServerRequestInterface $request) {
 // 	var_dump($request);
 // });
