@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Log;
+use DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -20,7 +21,8 @@ class UserController extends Controller
 	
 	public function signup(Request $request)
 	{
-		var_dump($request->input('User'));
+		$data = DB::table('user')->insertGetId($request->input('User'));
+		var_dump($data);
 	}
 
 	public function register()
