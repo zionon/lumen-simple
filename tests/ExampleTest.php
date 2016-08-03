@@ -18,4 +18,13 @@ class ExampleTest extends TestCase
         // );
         $this->post('register');
     }
+
+    /**
+     *
+     * 
+     */
+    // public function testExample()
+    // {
+    //     $this->visit('/')->click('返回主页')->seePageIs('/');
+    // }
 }

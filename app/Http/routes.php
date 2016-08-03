@@ -43,6 +43,9 @@ $app->get('phpinfo', 'ExampleController@phpinfo');
 $app->get('signup', 'PageController@signup');
 $app->get('register', 'UserController@register');
 $app->post('register', ['uses' => 'UserController@signup', 'as' => 'signup']);
+
+$app->get('post/create', 'PostController@create');
+$app->post('post', 'PostController@store');
 // $app->post();
 // $app->get('psr', function (ServerRequestInterface $request) {
 // 	var_dump($request);
