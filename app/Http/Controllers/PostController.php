@@ -22,4 +22,17 @@ class PostController extends Controller
 	{
 		return view('post.create');
 	}
+
+	/**
+	 *
+	 * 
+	 */
+	public function store(Request $request)
+	{
+		$this->validate($request, [
+			'username' => 'required',
+			'password' => 'required',
+			'email' => 'required',
+		]);
+	}
 }
