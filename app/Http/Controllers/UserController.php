@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use Log;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -24,6 +25,7 @@ class UserController extends Controller
 
 	public function register()
 	{
+		Log::info('this is register page');
 		return view('register');
 	}
 }
